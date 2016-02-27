@@ -1,8 +1,10 @@
-# LearningAngularJS_chapter2
 blogAngularJS
 
-Need to DO --- Setup for Karma and Protractor for Unit Testing and E2E Testing
-Add Twitter Bootstrap support
+TO DO -->
+--- Setup for Karma and Protractor for Unit Testing and E2E Testing
+--Add Twitter Bootstrap support
+--Create Angular REST Services
+--Choose b/w $http service and $resource object
 
 Completed Task -->
 Added support for E2E Testing using protractor
