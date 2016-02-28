@@ -5,6 +5,7 @@ TO DO -->
 --Add Twitter Bootstrap support
 --Create Angular REST Services
 --Choose b/w $http service and $resource object
+--Authentication provider
 
 Completed Task -->
 Added support for E2E Testing using protractor

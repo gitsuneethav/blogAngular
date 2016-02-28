@@ -2,7 +2,8 @@
 
 /* App Module */
 
-var blogApp = angular.module('blogApp', [ 'ngRoute', 'blogControllers' ]);
+var blogApp = angular.module('blogApp', [ 'ngRoute', 'blogControllers',
+		'blogServices' ]);
 blogApp.config([ '$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
 			$routeProvider.when('/', {
