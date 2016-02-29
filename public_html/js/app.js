@@ -3,7 +3,7 @@
 /* App Module */
 
 var blogApp = angular.module('blogApp', [ 'ngRoute', 'blogControllers',
-		'blogServices' ]);
+		'blogServices', 'blogBusinessServices', 'blogDirectives' ]);
 blogApp.config([ '$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
 			$routeProvider.when('/', {
@@ -12,6 +12,12 @@ blogApp.config([ '$routeProvider', '$locationProvider',
 			}).when('/blogPost/:id', {
 				templateUrl : 'partials/blogPost.html',
 				controller : 'BlogViewCtrl'
+			}).when('/login', {
+				templateUrl : 'partials/login.html',
+				controller : 'LoginCtrl'
+			}).when('/logOut', {
+				templateUrl : 'partials/login.html',
+				controller : 'LogoutCtrl'
 			});
 			$locationProvider.html5Mode(false).hashPrefix('!');
 		} ]);

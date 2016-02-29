@@ -19,5 +19,6 @@ describe(
 								.repeater('comment in blogEntry.comments'));
 						// checks the size of the commentList
 						expect(commentList.count()).toEqual(2);
+						// element(by.css('.navbar-brand')).click();
 					});
 		});

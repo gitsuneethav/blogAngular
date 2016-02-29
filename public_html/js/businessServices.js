@@ -1,7 +1,10 @@
 'use strict';
-/* business logic services only */
-var blogBusinessServices = angular
-		.module('blogBusinessServices', [ ngCookies ]);
+
+// ---business logic services
+// only------------------------------------------------------------------
+
+var blogBusinessServices = angular.module('blogBusinessServices',
+		[ 'ngCookies' ]);
 
 blogBusinessServices.factory('checkCreds', [ '$cookies', function($cookies) {
 	return function() {
@@ -12,18 +15,20 @@ blogBusinessServices.factory('checkCreds', [ '$cookies', function($cookies) {
 		}
 		return returnVal;
 	};
-} ])
+
+} ]);
 
 blogBusinessServices.factory('getToken', [ '$cookies', function($cookies) {
 	return function() {
 		var returnVal = "";
 		var blogCreds = $cookies.blogCreds;
-		if (blogCreds != undefined && blogCreds != "") {
+		if (blogCreds !== undefined && blogCreds !== "") {
 			returnVal = btoa(blogCreds);
 		}
 		return returnVal;
-	}
-} ])
+	};
+
+} ]);
 
 blogBusinessServices.factory('getUsername', [ '$cookies', function($cookies) {
 	return function() {
@@ -34,7 +39,8 @@ blogBusinessServices.factory('getUsername', [ '$cookies', function($cookies) {
 		}
 		return returnVal;
 	};
-} ])
+
+} ]);
 
 blogBusinessServices.factory('setCreds', [ '$cookies', function($cookies) {
 	return function(un, pw) {
@@ -42,6 +48,7 @@ blogBusinessServices.factory('setCreds', [ '$cookies', function($cookies) {
 		$cookies.blogCreds = token;
 		$cookies.blogUsername = un;
 	};
+
 } ]);
 
 blogBusinessServices.factory('deleteCreds', [ '$cookies', function($cookies) {

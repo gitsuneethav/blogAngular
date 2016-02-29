@@ -50,3 +50,20 @@ blogServices
 										}
 									});
 						} ]);
+
+blogServices
+		.factory(
+				'Login',
+				[
+						'$resource',
+						function($resource) {
+							return $resource(
+									"http://nodeblog-micbuttoncloud.rhcloud.com/NodeBlog/login",
+									{}, {
+										login : {
+											method : 'POST',
+											cache : false,
+											isArray : false
+										}
+									});
+						} ]);
